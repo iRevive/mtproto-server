@@ -14,14 +14,6 @@ lazy val commonSettings = Seq(
   name := Settings.name,
   scalaVersion := Versions.scala,
   scalacOptions ++= commonOptions ++ warnOptions ++ lintOptions,
-  wartremoverErrors in (Compile, compile) ++= Warts.allBut(
-    Wart.Any,                 // false positives
-    Wart.Nothing,             // false positives
-    Wart.Product,             // false positives
-    Wart.Serializable,        // false positives
-    Wart.ImplicitConversion,  // it's fine here
-    Wart.PublicInference      // fails https://github.com/wartremover/wartremover/issues/398
-  ),
   resolvers ++= Seq(Resolver.mavenLocal, Resolver.sbtPluginRepo("releases")),
   libraryDependencies ++= Dependencies.root,
   addCompilerPlugin("org.scalamacros" % "paradise" % "2.1.1" cross CrossVersion.full),

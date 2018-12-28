@@ -10,8 +10,7 @@ object Versions {
   val akka          = "2.5.19"
   val scodecCore    = "1.10.3"
   val scodecBits    = "1.1.7"
-  val http4s        = "0.19.0"
-  val cats          = "1.5.0"
+  val catsEffect    = "1.1.0"
   val logback       = "1.2.3"
   val scalaLogging  = "3.9.2"
   val scalatest     = "3.0.5"
@@ -22,7 +21,7 @@ object Dependencies {
 
   val root: Seq[ModuleID] = Seq(
     "com.typesafe.akka"          %% "akka-stream"         % Versions.akka,
-    "org.typelevel"              %% "cats-core"           % Versions.cats,
+    "org.typelevel"              %% "cats-effect"         % Versions.catsEffect,
     "org.scodec"                 %% "scodec-core"         % Versions.scodecCore,
     "org.scodec"                 %% "scodec-bits"         % Versions.scodecBits,
     "com.typesafe.scala-logging" %% "scala-logging"       % Versions.scalaLogging,
